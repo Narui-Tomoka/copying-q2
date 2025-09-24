@@ -1,0 +1,33 @@
+@use "./variables" as vars;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: 1rem;
+  font-family: vars.$font-family;
+  background-repeat: no-repeat;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: vars.$body-color;
+}
+
+ul {
+  list-style: none;
+}

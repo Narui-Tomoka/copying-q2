@@ -1,0 +1,7 @@
+@use "./variables" as vars;
+
+.wrapper {
+  max-width: vars.$wrapper-width;
+  padding: 0 12%;
+  margin: 0 auto;
+}
