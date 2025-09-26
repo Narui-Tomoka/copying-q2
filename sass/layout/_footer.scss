@@ -1,0 +1,17 @@
+.footer {
+  padding-bottom: 20px;
+  &__list {
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 0.7rem;
+  }
+  &__item {
+    font-size: 0.7rem;
+    text-decoration: underline;
+  }
+  &__copy {
+    text-align: center;
+    font-size: 0.75rem;
+  }
+}

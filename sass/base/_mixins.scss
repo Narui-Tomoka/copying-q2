@@ -1,0 +1,26 @@
+@use "sass:map";
+@use "./variables" as vars;
+
+// 「材料（2人分）」の分量「1個」を右寄せするためにdisplay:flexを使用したので
+// スタイルを全く同じにできなくなったので共通部分をミックスインに定義
+@mixin recipeList {
+  line-height: 1.7;
+  margin: 10px 0;
+  border-bottom: dotted 1px vars.$underline-color;
+  &--right {
+    margin-left: auto;
+  }
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// メディアクエリ
+@mixin mq($breakpoint) {
+  @media #{map.get(vars.$breakpoints,$breakpoint)} {
+    @content;
+  }
+}

@@ -1,7 +1,10 @@
 @use "./variables" as vars;
-
+@use "./mixins" as mix;
 .wrapper {
   max-width: vars.$wrapper-width;
-  padding: 0 12%;
+  padding: 0 10%;
   margin: 0 auto;
+  @include mix.mq(sp) {
+    padding: 0 5%;
+  }
 }

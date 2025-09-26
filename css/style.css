@@ -16,6 +16,7 @@ html {
 body {
   font-size: 1rem;
   font-family: "Noto Sans JP", sans-serif;
+  font-weight: 350;
   background-repeat: no-repeat;
 }
 
@@ -25,47 +26,135 @@ img {
 
 a {
   color: #222;
+  text-decoration: none;
 }
 
 ul {
   list-style: none;
 }
 
-.wrapper {
-  max-width: 835px;
-  padding: 0 12%;
-  margin: 0 auto;
+ol {
+  padding-left: 1em;
 }
 
-.container,
-.pagelink {
-  padding-bottom: 80px;
+.wrapper {
+  max-width: 835px;
+  padding: 0 10%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 835px) {
+  .wrapper {
+    padding: 0 5%;
+  }
+}
+
+.link-btn {
+  display: inline-block;
+  padding: 1rem 3rem;
+  border: solid 1px #222;
+}
+
+.footer {
+  padding-bottom: 20px;
+}
+.footer__list {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 0.7rem;
+}
+.footer__item {
+  font-size: 0.7rem;
+  text-decoration: underline;
+}
+.footer__copy {
+  text-align: center;
+  font-size: 0.75rem;
 }
 
 .container {
+  padding-bottom: 60px;
   display: flex;
 }
-
-.mainvisual__img {
-  max-width: 100%;
-  object-fit: cover;
+@media screen and (max-width: 835px) {
+  .container {
+    flex-direction: column;
+  }
 }
 
+.mainvisual {
+  width: 50%;
+}
+@media screen and (max-width: 835px) {
+  .mainvisual {
+    width: 100%;
+  }
+}
+.mainvisual__img {
+  width: 100%;
+  height: 700px;
+  object-fit: cover;
+}
+@media screen and (max-width: 835px) {
+  .mainvisual__img {
+    height: 510px;
+  }
+}
+
+.recipe {
+  width: 50%;
+}
+@media screen and (max-width: 835px) {
+  .recipe {
+    width: 100%;
+  }
+}
 .recipe__title {
   font-size: 1.8rem;
   padding-top: 40px;
 }
 .recipe__description {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 .recipe__caption {
+  line-height: 2.2;
   font-size: 1.2rem;
-  margin-top: 40px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  border-bottom: solid 1px #ccc;
 }
-.recipe__caption::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 1px;
-  background-color: #222;
+.recipe__list-item {
+  display: flex;
+  align-items: center;
+  line-height: 1.7;
+  margin: 10px 0;
+  border-bottom: dotted 1px #ccc;
+}
+.recipe__list-item--right {
+  margin-left: auto;
+}
+.recipe__list-item:first-child {
+  margin-top: 0;
+}
+.recipe__list-item:last-child {
+  margin-bottom: 0;
+}
+.recipe__text {
+  line-height: 1.7;
+  margin: 10px 0;
+  border-bottom: dotted 1px #ccc;
+}
+.recipe__text--right {
+  margin-left: auto;
+}
+.recipe__text:first-child {
+  margin-top: 0;
+}
+.recipe__text:last-child {
+  margin-bottom: 0;
+}
+
+.pagelink {
+  text-align: center;
+  padding-bottom: 80px;
 }

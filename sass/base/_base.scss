@@ -17,6 +17,7 @@ html {
 body {
   font-size: 1rem;
   font-family: vars.$font-family;
+  font-weight: 350;
   background-repeat: no-repeat;
 }
 
@@ -26,8 +27,13 @@ img {
 
 a {
   color: vars.$body-color;
+  text-decoration: none;
 }
 
 ul {
   list-style: none;
+}
+
+ol {
+  padding-left: 1em;
 }
